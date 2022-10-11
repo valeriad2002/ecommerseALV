@@ -1,156 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Programer,Design,Marketing,">
-    <meta name="description" content="Sitio Web de Presentacion">
-    <meta name="autor" content="Alex Patron,Valeria Duma,Luis">
-    <meta name="copyright" content="BossDesign"> 
-    <title>Academlo Store</title>  
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">  
-    <script src="https://kit.fontawesome.com/f2ac351995.js" crossorigin="anonymous"></script>
-</head>
-<body>    
-        
-     <!--**********ENCABEZADO DE LA PAGINA**********-->
-     <header id="headPage" class="headPage">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Programer,Design,Marketing," />
+    <meta name="description" content="Sitio Web de Presentacion" />
+    <meta name="autor" content="Alex Patron,Valeria Duma,Luis" />
+    <meta name="copyright" content="BossDesign" />
+    <title>Academlo Store</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/f2ac351995.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--**********ENCABEZADO DE LA PAGINA**********-->
+    <header id="headPage" class="headPage">
+      <!--********** LOADER **********-->
+      <div id="loader" class="loader hide">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48.92 56.48"
+          class="loader--img">
+          <title>Academlo Logo</title>
+          <g>
+            <g>
+              <path
+                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z"></path>
+              <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
 
-        <!--********** LOADER **********-->
-        <div id="loader" class="loader  hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
-                <title>Academlo Logo</title>
+      <!--********** BARRA DE NAVEGACION **********-->
+      <section class="headPage--secBar">
+        <div class="headPage--secBar__cont">
+          <div class="headPage--secBar__logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48.92 56.48"
+              class="imglogo">
+              <title>Academlo Logo</title>
+              <g>
                 <g>
-                    <g>
-                        <path
-                        d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
-                        </path>
-                        <path
-                        d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-                        </path>
-                    </g>
+                  <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z"></path>
                 </g>
+              </g>
             </svg>
-        </div>
+          </div>
 
-        <!--********** BARRA DE NAVEGACION **********-->
-        <section class="headPage--secBar">
-
-            <div class="headPage--secBar__cont">
-                <div class="headPage--secBar__logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="imglogo">
-                        <title>Academlo Logo</title>
-                        <g>
-                          <g>
-                            <path
-                              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-                            </path>
-                          </g>
-                        </g>
-                    </svg>
-                </div>
-                
-                <div class="headPage--secBar__cont__BoxIcon">
-                    <div>
-                        <i class='bx bx-moon bx-md' id="id--theme__dark"></i>
-                    </div>
-                    <div>
-                        <i class='bx bx-shopping-bag bx-md' ></i>
-                    </div>
-                </div>
-
-                <div class="headPage--secBar__cont__menuMobile">
-                    <label for="btn-menu">
-                        <i class='bx bx-menu bx-md' id="navOpen"></i>              
-                    </label>
-                </div>
+          <div class="headPage--secBar__cont__BoxIcon">
+            <div>
+              <i class="bx bx-moon bx-md" id="id--theme__dark"></i>
             </div>
-
-            <nav class="headPage--secBar__nav">
-                <input type="checkbox" id="btn-menu">
-                <ul class="headPage--secBar__nav__listNav">
-                    <li class="headPage--secBar__nav__listNav--item">
-                        <a href="#">
-                            <h2>Home</h2>
-                        </a>
-                    </li>
-                    <li class="headPage--secBar__nav__listNav--item">
-                        <a href="#">
-                            <h2>Product</h2>
-                        </a>
-                    </li>
-                </ul>              
-                <div id="navClose" class="headPage--secBar__navClose">
-                    <label for="btn-menu">
-                        <i class='bx bx-x-circle bx-md' ></i>           
-                    </label>
-                </div>
-            </nav>
-            
-        </section>
-
-        <!--********** PUBLICIDAD SUPERIOR *********-->    
-        <section class="headPage--banner">
-
-           <div id="idImgItem" class="headPage--banner__contImg">
-                <div>
-                    <img src="./assets/images/featured1.png" class="img--prod" alt="imagen de blusa amarilla">
-                </div>
-           </div> 
-
-           <div class="headPage--banner__inf">
-                <h2 class="headPage--banner__inf__title">
-                    NEW BLUSA AMARILLA collection 2022
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla autem dolore consequatur officiis! Mollitia accusantium odit voluptatibus veritatis officiis debitis perspiciatis at quo tempora? Labore assumenda eveniet a quis sapiente.
-                </p>
-                <h3 class="headPage--banner__inf__price">
-                    $20
-                </h3>
-
-                <div class="headPage--banner__inf__btnShop">
-                    <div class="headPage--banner__inf__btnShop__btnDis">
-                        <button>
-                            <h3>Discover</h3>
-                        </button>
-                    </div>
-                    <div class="headPage--banner__inf__btnShop__btnAdd">
-                        <button>
-                            <h3>Add to car</h3>
-                        </button>
-                    </div>
-                </div>
-           </div>
-
-        </section>
-    </header>
-        <!-- luisangel -->
-    <main>
-        <div class="container--link--shop">
-          <div class="all--shop">
-            <h2>Show ALl</h2>
-            <p>Show all products</p>
+            <div>
+              <i class="bx bx-shopping-bag bx-md"></i>
+            </div>
           </div>
-          <div class="product--shop">
-            <h2>Hoodies</h2>
-            <p>3 products</p>
-          </div>
-          <div class="product--shop">
-            <h2>Shirts</h2>
-            <p>4 products</p>
-          </div>
-          <div class="product--shop">
-            <h2>Sweatshirts</h2>
-            <p>4 products</p>
+
+          <div class="headPage--secBar__cont__menuMobile">
+            <label for="btn-menu">
+              <i class="bx bx-menu bx-md" id="navOpen"></i>
+            </label>
           </div>
         </div>
-        <section class="products--container" id="products--container">
-           
-        </section>
+
+        <nav class="headPage--secBar__nav">
+          <input type="checkbox" id="btn-menu" />
+          <ul class="headPage--secBar__nav__listNav">
+            <li class="headPage--secBar__nav__listNav--item">
+              <a href="#">
+                <h2>Home</h2>
+              </a>
+            </li>
+            <li class="headPage--secBar__nav__listNav--item">
+              <a href="#">
+                <h2>Product</h2>
+              </a>
+            </li>
+          </ul>
+          <div id="navClose" class="headPage--secBar__navClose">
+            <label for="btn-menu">
+              <i class="bx bx-x-circle bx-md"></i>
+            </label>
+          </div>
+        </nav>
+      </section>
+
+      <!--********** PUBLICIDAD SUPERIOR *********-->
+      <section class="headPage--banner">
+        <div id="idImgItem" class="headPage--banner__contImg">
+          <div>
+            <img
+              src="./assets/images/featured1.png"
+              class="img--prod"
+              alt="imagen de blusa amarilla" />
+          </div>
+        </div>
+
+        <div class="headPage--banner__inf">
+          <h2 class="headPage--banner__inf__title">
+            NEW BLUSA AMARILLA collection 2022
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla autem
+            dolore consequatur officiis! Mollitia accusantium odit voluptatibus
+            veritatis officiis debitis perspiciatis at quo tempora? Labore
+            assumenda eveniet a quis sapiente.
+          </p>
+          <h3 class="headPage--banner__inf__price">$20</h3>
+
+          <div class="headPage--banner__inf__btnShop">
+            <div class="headPage--banner__inf__btnShop__btnDis">
+              <button>
+                <h3>Discover</h3>
+              </button>
+            </div>
+            <div class="headPage--banner__inf__btnShop__btnAdd">
+              <button>
+                <h3>Add to car</h3>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- luisangel -->
+    <main>
+      <div class="container--link--shop">
+        <div class="all--shop">
+          <h2>Show ALl</h2>
+          <p>Show all products</p>
+        </div>
+        <div class="product--shop">
+          <h2>Hoodies</h2>
+          <p>3 products</p>
+        </div>
+        <div class="product--shop">
+          <h2>Shirts</h2>
+          <p>4 products</p>
+        </div>
+        <div class="product--shop">
+          <h2>Sweatshirts</h2>
+          <p>4 products</p>
+        </div>
+      </div>
+      <section class="products--container" id="products--container"></section>
     </main>
 
     <footer>
@@ -184,6 +187,6 @@
         </section>
       </div>
     </footer>
-    <script src="./assets/js/main.js"></script>  
-</body>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
