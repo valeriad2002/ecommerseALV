@@ -51,7 +51,7 @@ body.theme__dark{
   --card-color: hsla(246, 16%, 5%, .5);
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(249, 19%, 14%);
+  --body-color: hsl(249, 18%, 13%);
   --container-color: hsl(246, 16%, 12%);
   --border-color: hsl(0, 0%, 20%);
 }
@@ -260,6 +260,10 @@ body.theme__dark{
 
 }
 /* main */
+main{
+  display: flex;
+  justify-content: center;
+}
 .products--container {
   width: 100%;
   display: grid;
@@ -267,19 +271,74 @@ body.theme__dark{
 }
 
 .card--product {
-  width: 200px;
+  width: 175px;
   background-color: #fff;
-    margin-bottom: 2rem;
+  box-shadow: 1px 1px 1px 1px 10px rgb(176, 172, 172);
+  border-radius:5%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.card--product__img{
+    width: 100%;
+    height: 200px;
+    background-color: var(--card-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card--product img {
-  background-color: var(--card-color);
-  width: 100%;
+  width: 90%;
   
 }
 
+.btn-add{
+background-color: #ffffff;
+border-radius: 50%;
+border: none;
+width: 30px;
+height: 30px;
+font-size:2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+margin-left:130px ;
+margin-top: -20px;
+}
+
+.details{
+    display: grid;
+    align-items: center;
+    padding: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+.text--stock{
+  border-left: 1px solid #000;
+  padding-left: 0.5rem;
+}
+.container--link--shop{
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding:3rem 2rem;
+  }
+  .all--shop, .product--shop{
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+    
+  }
+  .product--shop{
+  padding-left: 1rem;
+  border-left:none;
+
+}
 
 
 
+/* /////////////////////////////////////// */
 /*FINAL*/
 footer {
   background-color: var(--card-color);
@@ -304,6 +363,41 @@ footer li, h4{
   padding: 1rem 0px;
 }
 @media screen and (min-width:768px) {
+
+
+
+
+
+/* main responsive */
+.products--container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card--product{
+
+  width: 200px;
+}
+.btn-add{
+  margin-left: 160px;
+  margin-top: -20px;
+}
+
+.container--link--shop{
+  grid-template-columns: repeat(4, 1fr);
+  padding-right: 6rem;
+}
+.product--shop{ 
+  border-left: 1px solid rgba(46, 46, 46, 0.464);
+}
+
+
+
+
+
+
+
+
   footer{
     display: flex;
     flex-direction: row;
