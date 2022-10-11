@@ -259,8 +259,23 @@ body.theme__dark{
    border-bottom: 2px solid var(--first-color) ;
 
 }
+/* main */
+.products--container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
 
-
+.card--product {
+  width: 200px;
+  background-color: #fff;
+    margin-bottom: 2rem;
+}
+.card--product img {
+  background-color: var(--card-color);
+  width: 100%;
+  
+}
 
 
 
