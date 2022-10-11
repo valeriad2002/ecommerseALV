@@ -90,7 +90,7 @@ const showProducts = () => {
 
   productContainer.innerHTML = fragment;
 
-  // cartfuntion();
+  cartfuntion();
 };
 
 
