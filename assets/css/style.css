@@ -14,6 +14,10 @@
   --body-color: hsl(206, 4%, 97%);
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
+  /*========== Se manejaran 3 tamanios max-width ==========*/
+  --mobile: 780px;
+  --tablet: 960px;
+  --desktop: 1200px;
 
   /*========== Font and typography ==========*/
   --body-font: 'Roboto', sans-serif;
@@ -33,12 +37,7 @@
     --border-color: hsl(0, 0%, 20%);
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
+
 body{
   background: var(--body-color);
   font-family: var(--body-font);
@@ -66,7 +65,7 @@ body.theme__dark{
   display: grid;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .loader.hide{
@@ -75,7 +74,7 @@ body.theme__dark{
 
 .loader--img{
   width: 100px;
-  fill: darkcyan;
+  fill: var(--first-color);
   position: relative;
   animation: load 1.5s infinite;
 }
@@ -94,9 +93,182 @@ body.theme__dark{
 }
 /*CABEZA*/
 
+
+/*====== ESTILIZANDO BARRA DE NAVEGACION ======*/
+.headPage{
+    margin: 10px auto;
+    width: 100%;
+    max-width: var(--mobile);
+}
+.headPage--secBar__cont{
+    z-index: 600;
+    position: fixed;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    max-width: var(--mobile);
+    grid-template-columns: 50px 1fr 100px 40px;
+    grid-template-areas: 
+    "logo . boxIcon menuIcon";
+    background: var(--container-color);
+    top: -0;
+    box-shadow: 0px 1px 8px 1px var(--text-color-light);
+}
+.imglogo{
+    height: 60px;
+    width: 60px;
+    fill: var(--first-color);
+}
+.headPage--secBar__logo{
+    grid-area:logo;
+}
+.headPage--secBar__cont__BoxIcon{
+    grid-area:boxIcon;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;    
+}
+.headPage--secBar__cont__menuMobile{
+    grid-area:menuIcon;
+    display: flex;
+}
+/*========== Estilando el menu mobile ===========*/
+#btn-menu{
+    visibility: hidden;
+    
+}
+
+.headPage--secBar__navClose{
+    display: none;
+}
+.navCloseActive{
+    z-index: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    left: -100%;
+    transition: left 2.5s ease;
+    background: var(--body-color);
+    border-right: 4px solid var(--first-color);
+}
+.headPage--secBar__nav__listNav{
+    z-index: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: left 2.5s ease;
+    background: var(--body-color);
+    border-right: 4px solid var(--first-color);
+
+}
+#btn-menu:checked ~ .headPage--secBar__nav__listNav{
+    left: 0;
+}
+#btn-menu:checked ~ .navCloseActive{
+    left: 0;
+}
+/*========== Estilando Las Listas del Nav ============*/
+.headPage--secBar__nav__listNav--item{
+    list-style:none;
+}
+.headPage--secBar__nav__listNav--item > a{
+    text-decoration: none; 
+}
+.headPage--secBar__nav__listNav--item > a > h2{
+    text-align: center;
+    width: auto;
+    padding: 0.5rem;
+    margin: 10px auto;
+    color: var(--text-color);
+   
+}
+ 
+/*============ ESTILIZANDO EL BANNER DE PUBLICIDAD SUPERIOR ============*/
+.headPage--banner{
+    z-index: 400;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-color);
+    border: 4px solid var(--first-color);
+    margin: 0 1rem;
+}
+.headPage--banner__contImg{
+    display: flex;
+    justify-content: end;
+    height: 350px;
+}
+.headPage--banner__contImg >div{
+    background-color: var(--first-color);
+    position: relative;
+    left: 19.5px;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.headPage--banner__inf__title{
+    font-size: 24px;
+    padding: 1rem 0;
+    color: var(--title-color);
+}
+.headPage--banner__inf > p {
+    font-size: 16px;
+    padding: 1rem 0;
+    text-align: justify;
+}
+.headPage--banner__inf__price{
+    color: var(--first-color);
+    padding: 1rem 0;
+}
+.headPage--banner__inf__btnShop{
+    display: flex;
+    gap: 0.5rem;
+
+
+}
+.headPage--banner__inf__btnShop > div {
+    box-shadow: 2px 1px 200px 1px var(--text-color-light);
+    margin: 0.5rem 0;
+
+}
+.headPage--banner__inf__btnShop > div > button{
+    background-color: var(--card-color);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    transition: all ease 100ms;
+    border: 2px solid var(--first-color) ;
+    border-bottom: 6px solid var(--first-color) ;
+}
+.headPage--banner__inf__btnShop > div > button:active{
+   transform: translateY(5px);
+   border-bottom: 2px solid var(--first-color) ;
+
+}
+
+
+
+
+
+
 /*FINAL*/
 footer {
   background-color: var(--card-color);
+  padding-top: 1rem;
 }
 
 footer>div {
