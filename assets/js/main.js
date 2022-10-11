@@ -64,3 +64,36 @@ closeMain.addEventListener( "click", () => {
 
     
 })
+
+
+/** section products */
+const showProducts = () => {
+  const productContainer = document.getElementById("products--container");
+
+  let fragment = ``;
+
+  items.forEach((producto) => {
+    fragment += `
+        <div class="card--product" id="${producto.id}">
+
+        <img src="${producto.image}" alt="">
+        <button class="btn-add">+</button>
+        <div class="details">
+        <h2 class="price-card">$${producto.price} </h2>
+            <p>stock${producto.quantity}</p>
+
+            <p>${producto.name}</p>
+            </div>
+        </div>
+         `;
+  });
+
+  productContainer.innerHTML = fragment;
+
+  // cartfuntion();
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  showProducts()
+})
