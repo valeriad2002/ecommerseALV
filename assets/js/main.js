@@ -61,6 +61,7 @@ closeMain.addEventListener("click", () => {
   cerrar.classList.add("navCloseActive");
 });
 
+
 /** section products */
 const showProducts = () => {
   const productContainer = document.getElementById("products--container");
@@ -91,6 +92,22 @@ const showProducts = () => {
 
   cartFunctionality();
 };
+// show cart
+const showCart = document.getElementById("showCart");
+const closedShowCart = document.getElementById("btn-closed-show");
+const openShowCart = document.getElementById("btn-open-show");
+
+openShowCart.addEventListener("click", () => {
+  showCart.style.right = "0";;
+});
+
+
+closedShowCart.addEventListener("click", () => {
+  showCart.style.right = "-100%";
+});
+
+
+
 // funcion de botones
 const cart = [];
 
