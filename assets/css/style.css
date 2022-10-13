@@ -281,7 +281,7 @@ body.theme__dark {
 }
 .product--select{
 
-  display: none;
+  display: flex;
   align-items: center;
   column-gap: 1rem;
 }
@@ -335,7 +335,7 @@ margin-bottom: 0.5rem;
   margin-top: 7rem;
 }
 .empty--show{
-  display: grid;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

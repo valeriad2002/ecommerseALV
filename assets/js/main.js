@@ -61,7 +61,6 @@ closeMain.addEventListener("click", () => {
   cerrar.classList.add("navCloseActive");
 });
 
-
 /** section products */
 const showProducts = () => {
   const productContainer = document.getElementById("products--container");
@@ -91,36 +90,66 @@ const showProducts = () => {
   productContainer.innerHTML = fragment;
 
   cartFunctionality();
+  // producShowAdd()
 };
-// show cart
-const showCart = document.getElementById("showCart");
-const closedShowCart = document.getElementById("btn-closed-show");
-const openShowCart = document.getElementById("btn-open-show");
 
-openShowCart.addEventListener("click", () => {
-  showCart.style.right = "0";;
-});
+// funcion add to cartShow
+function producShowAdd() {
+  const showProductsContainer = document.getElementById(
+    "show--products--container"
+  );
+  const showProductsItems = showProducts;
+  let fragment = ``;
 
+  if (showProductsItems.length === 0) {
+    items.forEach((producto) => {
+      fragment += ` <div class="product--select">
+    <div class="img--show">
+      <img src="${producto.image}" alt="" />
+    </div>
+    <div class="product--select__info">
+      <h3>${producto.name}</h3>
+      <p class="stock--show">Stock:${producto.quantity} | <span>${producto.price}</span></p>
+      <p>${producto.price}</p>
 
-closedShowCart.addEventListener("click", () => {
-  showCart.style.right = "-100%";
-});
+      <div class="cart--cont--item">
+        <div class="quatity--select">
+          <button class="quatity--select__btn"><i class='bx bx-minus'></i></button>
+          <p>${producto.id}</p>
 
+          <button class="quatity--select__btn"><i class='bx bx-plus'></i></button>
+        </div>
 
+        <i class="bx bx-trash"></i>
+      </div>
+    </div>
+  </div>`;
+    });
+  } else {
+    fragment = ` <div class="empty--show">
+    <img src="./assets/images/empty-cart.png" alt="" />
+    <h2>your cart is empty</h2>
+    <p>
+      you can add item to your cart by clicking on the add to cart button
+    </p>
+  </div>`;
+  }
+  showProductsContainer.innerHTML = fragment;
+}
 
 // funcion de botones
 const cart = [];
 
 function cartFunctionality() {
-  const btns = document.querySelectorAll(".btn-add");
-  
+  const btns = document.querySelectorAll(".btn-add ");
+
   btns.forEach((button) => {
     button.addEventListener("click", (e) => {
       const id = parseInt(e.target.parentElement.id);
-      const selectedProduct = items.find(item => item.id === id);
+      const selectedProduct = items.find((item) => item.id === id);
 
-      let index = cart.indexOf(selectedProduct);      
-      if (index !== -1 ) {
+      let index = cart.indexOf(selectedProduct);
+      if (index !== -1) {
         if (cart[index].quantity <= cart[index].cantidad) {
           window.alert("No hay stock");
         } else {
@@ -128,32 +157,29 @@ function cartFunctionality() {
         }
       } else {
         selectedProduct.cantidad = 1;
-        
+
         cart.push(selectedProduct);
       }
-      
+
       showProducts(cart);
       console.log(cart);
+      producShowAdd();
     });
   });
 }
 
-// const counterProduts = () => {
-//   const linkShop = document.querySelectorAll(".container--link--shop");
-//   let conterItems = ``;
-//   items.forEach((producto) => {
-//     conterItems += `
-//  <div class="all--shop">
-//  <h2>${producto.name}</h2>
-//  <p> ${producto.quantity} products</p>
-// </div>
-//   `;
-//   });
+// show cart open and closed
+const showCart = document.getElementById("showCart");
+const closedShowCart = document.getElementById("btn-closed-show");
+const openShowCart = document.getElementById("btn-open-show");
 
-//   linkShop.innerHTML = conterItems;
-//   console.log(linkShop);
-// };
+openShowCart.addEventListener("click", () => {
+  showCart.style.right = "0";
+});
 
+closedShowCart.addEventListener("click", () => {
+  showCart.style.right = "-100%";
+});
 document.addEventListener("DOMContentLoaded", () => {
   showProducts();
 });
