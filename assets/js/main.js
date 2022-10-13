@@ -39,9 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*CABEZA */
+
+
+
+
+const navBMenuH=document.querySelector(".icon-ham")
+let navMenuH=document.querySelector(".icon-menu")
+
+navBMenuH.addEventListener("click",()=>{
+  
+  navMenuH.classList.toggle("ham-visi")
+})
+let closeMain=document.querySelector(".navClose")
+console.log(closeMain);
+
+closeMain.addEventListener("click", () => {
+  closeMain.classList.toggle("navCloseActive")
+  navMenuH()
+});
+
 const themeDark = document.getElementById("id--theme__dark");
 console.log(themeDark);
-
 themeDark.addEventListener("click", () => {
   document.body.classList.toggle("theme__dark");
   if (themeDark.classList.contains("bx-moon")) {
@@ -52,18 +70,24 @@ themeDark.addEventListener("click", () => {
   }
 });
 
-const closeMain = document.getElementById("navOpen");
 
-console.log(closeMain);
-
-closeMain.addEventListener("click", () => {
-  const cerrar = document.getElementById("navClose");
-  console.log(cerrar);
-  cerrar.classList.add("navCloseActive");
+/*const themeDark = document.getElementById("id--theme__dark");
+console.log(themeDark);*/
+/*
+themeDark.addEventListener("click", () => {
+  document.body.classList.toggle("theme__dark");
+  if (themeDark.classList.contains("bx-moon")) {
+    //evaluar si existe la clase bx-moon
+    themeDark.classList.replace("bx-moon", "bx-sun");
+  } else {
+    themeDark.classList.replace("bx-sun", "bx-moon");
+  }
 });
 
+
+*/
 /** section products */
-const showProducts = () => {
+/*const showProducts = () => {
   const productContainer = document.getElementById("products--container");
 
   let fragment = ``;
@@ -111,4 +135,4 @@ const showProducts = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   showProducts();
-});
+});*/
