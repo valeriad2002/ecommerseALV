@@ -17,6 +17,8 @@
     <script
       src="https://kit.fontawesome.com/f2ac351995.js"
       crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
   </head>
   <body>
     <!--**********ENCABEZADO DE LA PAGINA**********-->
@@ -41,7 +43,7 @@
 
       <!--********** BARRA DE NAVEGACION **********-->
       <section class="headPage--secBar">
-        <div class="headPage--secBar__cont">
+        <nav class="headPage--secBar__cont">
           <div class="headPage--secBar__logo">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,9 +73,9 @@
               <i class="bx bx-menu bx-md" id="navOpen"></i>
             </label>
           </div>
-        </div>
+        </nav>
 
-        <nav class="headPage--secBar__nav">
+        <div class="headPage--secBar__nav">
           <input type="checkbox" id="btn-menu" />
           
           <ul class="headPage--secBar__nav__listNav">
@@ -93,7 +95,7 @@
               <i class="bx bx-x-circle bx-md"></i>
             </label>
           </div>
-        </nav>
+        </div>
       </section>
 
       <!--********** PUBLICIDAD SUPERIOR *********-->
@@ -135,6 +137,36 @@
       </section>
     </header>
     <!-- luisangel -->
+    <div class="container--show--cart">
+      <i class='bx bx-x closed--show'></i>
+      <h2>My Cart</h2>
+      <div class="products--select">
+        <div class="product--select">
+          <img src="./assets/images/featured1.png" alt="">
+          <div class="product--select__info">
+            <h3>name</h3>
+            <p>Stock:number</Stock:number></p>
+            <p>$20</p>
+            <h3>subtotal: suma de este producto</h3>
+
+            <div class="quatity--select">
+              <button class="quatity--select__btn">-</button>
+              <p>1</p>
+              <button class="quatity--select__btn">+</button>
+            </div>
+
+          </div>
+          <div class="product--select__btn">
+            <button class="btn--remove">Remove</button>
+          </div>
+        </div>
+      
+        </div>
+      </div>
+
+    </div>
+
+
     <main>
       <div class="container--link--shop">
         <div class="all--shop">

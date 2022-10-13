@@ -5,7 +5,7 @@ const items = [
     price: 14.0,
     image: "assets/images/featured1.png",
     category: "hoodies",
-    quantity: 10,
+    quantity: 1,
   },
   {
     id: 2,
@@ -28,9 +28,9 @@ const items = [
 /*LODER */
 const loadComponent = () => {
   const loader = document.getElementById("loader");
-setTimeout(() => {
-  loader.classList.add("hide");
-}, 3000);
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 3000);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*CABEZA */
 const themeDark = document.getElementById("id--theme__dark");
-console.log(themeDark);
+// console.log(themeDark);
 
 themeDark.addEventListener("click", () => {
   document.body.classList.toggle("theme__dark");
@@ -53,11 +53,11 @@ themeDark.addEventListener("click", () => {
 
 const closeMain = document.getElementById("navOpen");
 
-console.log(closeMain);
+// console.log(closeMain);
 
 closeMain.addEventListener("click", () => {
   const cerrar = document.getElementById("navClose");
-  console.log(cerrar);
+  // console.log(cerrar);
   cerrar.classList.add("navCloseActive");
 });
 
@@ -89,8 +89,37 @@ const showProducts = () => {
 
   productContainer.innerHTML = fragment;
 
-  // cartfuntion();
+  cartFunctionality();
 };
+// funcion de botones
+const cart = [];
+
+function cartFunctionality() {
+  const btns = document.querySelectorAll(".btn-add");
+  
+  btns.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const id = parseInt(e.target.parentElement.id);
+      const selectedProduct = items.find(item => item.id === id);
+
+      let index = cart.indexOf(selectedProduct);      
+      if (index !== -1 ) {
+        if (cart[index].quantity <= cart[index].cantidad) {
+          window.alert("No hay stock");
+        } else {
+          cart[index].cantidad++;
+        }
+      } else {
+        selectedProduct.cantidad = 1;
+        
+        cart.push(selectedProduct);
+      }
+      
+      showProducts(cart);
+      console.log(cart);
+    });
+  });
+}
 
 // const counterProduts = () => {
 //   const linkShop = document.querySelectorAll(".container--link--shop");
